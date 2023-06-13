@@ -14,4 +14,10 @@ public interface BillEntityMapper {
 //    填写每天的收入和支出
     int insert(BillEntity billEntity);
 
+//    删除某人的收入和支出
+    int deletebyid(BillEntity billEntity);
+
+//    修改
+    int updatebyid(BillEntity billEntity);
+
 }

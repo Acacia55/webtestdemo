@@ -16,9 +16,7 @@ public class BillService {
 
     public BillEntity seebill(BillEntity billEntity){
 
-        BillEntity ResultBillEntity=billEntityMapper.selectBill(billEntity);
-
-        return ResultBillEntity;
+        return billEntityMapper.selectBill(billEntity);
 
     }
 
@@ -27,7 +25,32 @@ public class BillService {
 
         int result = billEntityMapper.insert(billEntity);
 
+        if (result != 0){
+            return 3;/*3代表ok*/
+        }
+
         return result;
+    }
+
+//    删除
+    public int deleteBillById(BillEntity billEntity){
+
+        int billResult = billEntityMapper.deletebyid(billEntity);
+
+        if (billResult !=0){
+            return 3;
+        }
+        return billResult;
+    }
+
+    public int modifyBillById(BillEntity billEntity){
+
+        int billResult = billEntityMapper.updatebyid(billEntity);
+
+        if (billResult !=0){
+            return 3;
+        }
+        return billResult;
     }
 
 
