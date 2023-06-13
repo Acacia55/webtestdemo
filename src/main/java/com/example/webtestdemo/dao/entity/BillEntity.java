@@ -2,7 +2,7 @@ package com.example.webtestdemo.dao.entity;
 
 import java.io.Serializable;
 
-public class Bill implements Serializable {
+public class BillEntity implements Serializable {
 
     private String id;
     private String userid;

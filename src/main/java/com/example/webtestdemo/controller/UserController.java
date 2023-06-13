@@ -4,14 +4,13 @@ import com.example.webtestdemo.beans.HttpResponseEntity;
 import com.example.webtestdemo.dao.entity.UserEntity;
 import com.example.webtestdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin("http://localhost:8085")
-@RequestMapping("/admin")
+//@RequestMapping("/admin")
 public class UserController {
 
     @Autowired
