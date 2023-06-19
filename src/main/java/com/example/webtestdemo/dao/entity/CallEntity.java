@@ -6,7 +6,7 @@ public class CallEntity implements Serializable {
 
     private String userid;
 
-    private String name;
+    private String usersname;
 
     private String phonenumber;
 
@@ -19,11 +19,11 @@ public class CallEntity implements Serializable {
     }
 
     public String getName() {
-        return name;
+        return usersname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String usersname) {
+        this.usersname = usersname;
     }
 
     public String getPhonenumber() {
@@ -38,7 +38,7 @@ public class CallEntity implements Serializable {
     public String toString() {
         return "CallEntity{" +
                 "userid='" + userid + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + usersname + '\'' +
                 ", phonenumber='" + phonenumber + '\'' +
                 '}';
     }

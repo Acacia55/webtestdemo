@@ -36,7 +36,7 @@
   </select>
 
   <insert id="insert" parameterType="com.example.webtestdemo.dao.entity.BillEntity">
-    insert into bill (id, userid, out,in)
+    insert into bill (id, userid, billout,billin)
     values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR},
             #{out,jdbcType=VARCHAR}, #{in,jdbcType=VARCHAR})
   </insert>
@@ -50,8 +50,8 @@
     update bill
     set id = #{id,jdbcType=VARCHAR},
         userid = #{userid,jdbcType=VARCHAR},
-        out = #{out,jdbcType=VARCHAR},
-        in = #{in,jdbcType=VARCHAR},
+        billout = #{out,jdbcType=VARCHAR},
+        billin = #{in,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 

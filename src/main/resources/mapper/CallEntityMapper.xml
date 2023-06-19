@@ -31,19 +31,19 @@
     <!--根据登入的账户名查找bill信息-->
   <select id="orderCallByName" parameterType="java.lang.String" resultType="com.example.webtestdemo.dao.entity.CallEntity">
     SELECT *
-    FROM call
+    FROM usercall
     WHERE userid =#{userid,jdbcType=VARCHAR}
-    ORDER BY name asc
+    ORDER BY usersname desc
   </select>
 
   <insert id="insert" parameterType="com.example.webtestdemo.dao.entity.CallEntity">
-    insert into call (userid, name, phonenumber)
-    values (#{userid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+    insert into usercall (userid, usersname, phonenumber)
+    values (#{userid,jdbcType=VARCHAR}, #{usersname,jdbcType=VARCHAR},
             #{phonenumber,jdbcType=VARCHAR})
   </insert>
 
   <delete id="deletebyphone" parameterType="com.example.webtestdemo.dao.entity.CallEntity">
-    delete from date
+    delete from usercall
     where phonenumber = #{phonenumber,jdbcType=VARCHAR}
   </delete>
 
