@@ -1,12 +1,13 @@
 package com.example.webtestdemo.dao.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class BusEntity implements Serializable {
 
     private String userid;
 
-    private String time;
+    private Date time;
 
     private String sit;
 
@@ -18,11 +19,11 @@ public class BusEntity implements Serializable {
         this.userid = userid;
     }
 
-    public String getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 
