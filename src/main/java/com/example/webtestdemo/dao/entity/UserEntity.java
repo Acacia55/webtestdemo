@@ -10,7 +10,7 @@ public class UserEntity implements Serializable {
 
     private String username;
 
-    private String userpassword;
+    private String password;
 
     public String getId() {
         return id;
@@ -36,12 +36,12 @@ public class UserEntity implements Serializable {
         this.username = username;
     }
 
-    public String getUserpassword() {
-        return userpassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserpassword(String userpassword) {
-        this.userpassword = userpassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class UserEntity implements Serializable {
                 "id='" + id + '\'' +
                 ", userid='" + userid + '\'' +
                 ", username='" + username + '\'' +
-                ", userpassword='" + userpassword + '\'' +
+                ", userpassword='" + password + '\'' +
                 '}';
     }
 }

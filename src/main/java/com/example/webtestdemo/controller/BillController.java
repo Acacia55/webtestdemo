@@ -4,6 +4,7 @@ import com.example.webtestdemo.beans.HttpResponseEntity;
 import com.example.webtestdemo.dao.entity.BillEntity;
 import com.example.webtestdemo.dao.entity.UserEntity;
 import com.example.webtestdemo.service.BillService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 //@RequestMapping("/admin")
 public class BillController {
 
+    @Autowired
     private BillService billService;
 
 //    查看用户的bill
@@ -23,12 +25,12 @@ public class BillController {
         if (hasbill == null){
             httpResponseEntity.setCode("0");
             httpResponseEntity.setData(0);
-            httpResponseEntity.setMessage("用户名或密码错误");
+            httpResponseEntity.setMessage("该用户没有收支账单");
         }
         else {
             httpResponseEntity.setCode("666");
             httpResponseEntity.setData(hasbill);
-            httpResponseEntity.setMessage("登陆成功");
+            httpResponseEntity.setMessage("查询成功");
         }
 
     }catch (Exception e){

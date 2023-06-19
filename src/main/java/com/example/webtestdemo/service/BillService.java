@@ -43,6 +43,7 @@ public class BillService {
         return billResult;
     }
 
+//    修改
     public int modifyBillById(BillEntity billEntity){
 
         int billResult = billEntityMapper.updatebyid(billEntity);
